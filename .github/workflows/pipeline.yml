@@ -39,6 +39,9 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "nameless-taiga-45576" 
           heroku_email: "grildgherkin@hotmail.com"
+          healthcheck: "https://nameless-taiga-45576.herokuapp.com/health"
+          checkstring: "ok"
+          rollbackonhealthcheckfailed: true
           
           uses: actions/checkout@v2
           
